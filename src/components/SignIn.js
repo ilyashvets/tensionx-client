@@ -9,7 +9,7 @@ export default function SignIn(props) {
   const [password, setPassword] = useState('')
 
   function login(data) {
-    axios.post(`http://localhost:5556/api/auth/login`, data)
+    axios.post(`http://45.93.136.144:5556/api/auth/login`, data)
       .then(res => {
         props.setToken(res.data.token)
       })

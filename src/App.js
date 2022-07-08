@@ -27,7 +27,7 @@ function App() {
         window.localStorage.setItem('tensionx-auth', token)
         timeout = setTimeout(resetAuth, endTime - Date.now())
 
-        const socket = io('http://localhost:5556', {auth: {token}})
+        const socket = io('http://45.93.136.144:5556', {auth: {token}})
         setSocket(socket)
 
       } else resetAuth()
