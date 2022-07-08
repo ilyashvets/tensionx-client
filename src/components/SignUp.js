@@ -21,7 +21,7 @@ export default function SignUp(props) {
   function register(data) {
     if (data.password !== data.passwordConfirm) window.alert('Passwords are not the same')
     else {
-      axios.post('https://tensionx-nest.herokuapp.com/api/auth/register', {role, email, password})
+      axios.post('http://localhost:5556/api/auth/register', {role, email, password})
         .then(() => {
           window.alert('Successfully registered. Now you can logged in')
         })
