@@ -9,7 +9,7 @@ export default function SignIn(props) {
   const [password, setPassword] = useState('')
 
   function login(data) {
-    axios.post(`http://localhost:3000/api/auth/login`, data)
+    axios.post(`https://tensionx.herokuapp.com/api/auth/login`, data)
       .then(res => {
         props.setToken(res.data.token)
       })

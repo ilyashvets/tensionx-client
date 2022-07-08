@@ -27,7 +27,7 @@ function App() {
         window.localStorage.setItem('tensionx-auth', token)
         timeout = setTimeout(resetAuth, endTime - Date.now())
 
-        const socket = io("http://localhost:3000", {auth: {token}})
+        const socket = io("https://tensionx.herokuapp.com/", {auth: {token}})
         setSocket(socket)
 
       } else resetAuth()
